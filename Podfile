@@ -1,24 +1,42 @@
-# Uncomment this line to define a global platform for your project
-platform :ios, '8.0'
-# Uncomment this line if you're using Swift
-use_frameworks!
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
 
-pod 'ReactiveCocoa', '~> 4.1.0'
+target 'DKCS' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  use_frameworks!
 
-target 'Calendar' do
+  # Pods for DKCS
+  pod 'ReactiveObjC', '~> 3.0.0'
 
-pod 'AFNetworking', '~> 3.0.4'
-pod 'SDWebImage', '~> 3.7.6'
-pod 'Masonry', '~> 1.0.0'
-pod 'TTTAttributedLabel', '~> 2.0.0'
-pod 'DateTools', '~> 1.7.0'
-pod 'pop', '~> 1.0.9'
+  # Network.
+  pod 'AFNetworking', '~> 3.1.0'
+  pod 'YYModel', '~> 1.0.4'
+
+  # UI
+  pod 'MJRefresh', '~> 3.1.12'
+  pod 'TTTAttributedLabel', '~> 2.0.0'
+  pod 'SDCycleScrollView', '~> 1.65'
+  pod 'UITextView+Placeholder', '~> 1.2.0'
+  # pod 'iCarousel', '~> 1.8.3'
+  pod 'SVProgressHUD', '~> 2.1.2'
+  pod 'SCLAlertView-Objective-C', '~> 1.1.2'
+
+  # Layout
+  pod 'Masonry', '~> 1.0.2'
+  pod 'ManualLayout'
+
+  # Tools
+  # pod 'SDWebImage', '~> 4.0.0'
+  pod 'PINCache', '~> 3.0.1-beta.4'
+  pod 'CocoaLumberjack', '~> 3.2.0'
+  pod 'DateTools', '~> 2.0.0'
+  pod 'JKCategories', '~> 1.5'
+  pod 'ChameleonFramework', '~> 2.1.0'
+  pod 'IQKeyboardManager', '~> 4.0.9'
+
+  target 'DKCSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
 
 end
-
-target 'CalendarTests' do
-
-pod 'OCMock', '~> 3.3'
-
-end
-
